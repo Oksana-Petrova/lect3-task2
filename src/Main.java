@@ -1,19 +1,17 @@
 public class Main {
     public static void main(String[] args) {
+        int initialAccount = 7890;
+        int accountReplenishment = 950;
+        int bonus;
 
-        int nachSchet = 7890;
-        int prihod =5890;
-        int bonus = prihod / 100;
-        int itogSchet;
-
-        if (prihod > 1000) {
-            itogSchet = nachSchet + prihod + bonus;
+        if (accountReplenishment > 1000) {
+            bonus = accountReplenishment / 100;
         } else {
-            itogSchet = nachSchet + prihod;
+            bonus = 0;
         }
 
-        System.out.println("Итоговый счет: " + (nachSchet + prihod + bonus) + " руб.");
+        int finalAccount = initialAccount + accountReplenishment + bonus;
+        System.out.println("Итоговый счет: " + finalAccount + " руб.");
         System.out.println("Сумма бонусов: " + bonus + " руб.");
-
     }
 }
